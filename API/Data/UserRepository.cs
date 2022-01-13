@@ -1,4 +1,4 @@
-﻿using API.Controllers.Dtos;
+﻿using API.Dtos;
 using API.Entities;
 using API.Interfaces;
 using AutoMapper;

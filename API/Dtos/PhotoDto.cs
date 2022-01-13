@@ -1,4 +1,4 @@
-﻿namespace API.Controllers.Dtos
+﻿namespace API.Dtos
 {
     public class PhotoDto
     {

@@ -1,6 +1,5 @@
-﻿using API.Controllers.Dtos;
+﻿using API.Dtos;
 using API.Data;
-using API.Dtos;
 using API.Entities;
 using API.Interfaces;
 using Microsoft.AspNetCore.Mvc;
