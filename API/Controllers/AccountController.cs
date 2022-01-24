@@ -1,12 +1,12 @@
-﻿using API.Dtos;
-using API.Data;
+﻿using API.Data;
+using API.Dtos;
 using API.Entities;
 using API.Interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
-using AutoMapper;
 
 namespace API.Controllers
 {
