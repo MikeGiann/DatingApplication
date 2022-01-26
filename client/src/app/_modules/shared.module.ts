@@ -10,6 +10,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoModule } from 'ngx-timeago';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [],
@@ -26,6 +27,7 @@ import { TimeagoModule } from 'ngx-timeago';
     BsDropdownModule.forRoot(),
     ButtonsModule.forRoot(),
     TimeagoModule.forRoot(),
+    ModalModule.forRoot(),
     BrowserAnimationsModule
   ],
   exports: [
@@ -37,6 +39,7 @@ import { TimeagoModule } from 'ngx-timeago';
     BsDropdownModule,
     ButtonsModule,
     TimeagoModule,
+    ModalModule,
     BrowserAnimationsModule
   ]
 })
