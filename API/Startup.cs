@@ -1,5 +1,6 @@
 using API.Extensions;
 using API.Middleware;
+using API.SignalR;
 using Microsoft.OpenApi.Models;
 
 namespace API
@@ -20,9 +21,12 @@ namespace API
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(policy => policy.AllowAnyHeader()
-                    .AllowAnyMethod().WithOrigins("https://localhost:4200"));
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .WithOrigins("https://localhost:4200"));
             });
             services.AddIdentityServices(_config);
+            services.AddSignalR();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
@@ -47,6 +51,8 @@ namespace API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<PresenceHub>("hubs/presence");
+                endpoints.MapHub<MessageHub>("hubs/message");
             });
         }
     }
