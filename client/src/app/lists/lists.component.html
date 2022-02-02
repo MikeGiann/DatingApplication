@@ -2,7 +2,7 @@
   <h2>{{predicate === 'liked' ? 'Members you like' : 'Members who like you'}}</h2>
 </div>
 <div class="container mt-3">
-  <div class="row">
+  <div class="d-flex">
     <div class="btn-group" name="predicate">
       <button class="btn btn-primary" btnRadio="liked"
               [(ngModel)]="predicate" (click)="loadLikes()">
